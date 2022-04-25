@@ -1,41 +1,42 @@
 # **Takım İsmi**
 
-Takım X
+Debuggers
 
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
 
-- John Doe: Product Owner
-- Jane Doe: Scrum Master
-- Atıl Samancıoğlu: Team Member/Developer
+- Sinem Karaoğlu: Product Owner
+- Kübra Özcan: Scrum Master
+- Ahmet İskender: Developer
+- Ömer Faruk Şahan: Developer
+- Doruk Kızıltunç: Developer
 
 ## Ürün İsmi
 
---Movie App--
+Meet With
 
 ## Ürün Açıklaması
 
-- Movie App uygulamamız ile insanların izlemek istediği filmlere ve dizilere daha kolay karar vermesini sağlayacağız. İçerisinde binlerce filmi barındıran uygulamamız aynı zamanda Netflix, Prime vb. platformlarda yayınlanıp yayınlanmadığını ve IMDB puanlarını da gösterecek.
+- Meet With uygulamamız ile insanların yalnız yapmak istemediği etkinlikler için kendilerine bir arkadaş bulmalarını kolaylaştıracağız. Uygulamamız, yalnız yemek yemekten/konsere gitmekten/içecek içmekten hoşlanmayan ve kendine eşlik edecek birini bulmak isteyen kişilerin etkinlik oluşturmasına imkân verecek, konumlarına göre anlık katılabilecekleri etkinlikleri listeleyip davet göndererek etkinlik sahibiyle saniyeler içinde iletişime geçip plan yapmayı sağlayacak. Ek olarak etkinlik oluşturma özelliği sayesinde önceden planlanmış etkinliklere katılma imkanı da verecek.
 
 ## Ürün Özellikleri
 
-- Filmleri türüne göre ayırma
-- Filmlerin yönetmen, aktör, aktris vb. bilgilerini posteriyle birlikte gösterme
-- IMDB ve Rotten Tomatoes puanlarını gösterme
-- Netflix'te ve Prime'da bulunurluğunu gösterme
+- Etkinlik oluşturma
+- Etkinlikleri kategorilerine göre filtreleyebilme
+- Görüştüğün kişiye geri bildirim verebilme (Referans olma)
+- Yeni insanlarla tanışma fırsatı
+
 
 ## Hedef Kitle
 
-- Netflix kullanıcıları
-- Prime kullanıcıları
-- Sinema severler
-- Dizi severler
-- 15 - 65 yaş arası kullanıcılar
+- Sosyalleşmeye ve yeni insanlar tanımaya açık bireyler
+- 18-50 yaş arası tüm kullanıcılar
+- Couchsurfing kullanıcıları
+
 
 ## Product Backlog URL
 
-[Miro Backlog Board](https://miro.com/app/board/uXjVO6Dz95M=/?share_link_id=506494482733)
-
+Miro Backlog Board Debuggers [https://miro.com/app/board/uXjVO6Dz95M=/?share_link_id=967609512231]
 ---
 
