@@ -9,7 +9,6 @@ Debuggers
 - Sinem Karaoğlu: Product Owner
 - Kübra Özcan: Scrum Master
 - Ahmet İskender: Developer
-- Ömer Faruk Şahan: Developer
 - Doruk Kızıltunç: Developer
 
 ## Ürün İsmi
