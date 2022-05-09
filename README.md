@@ -33,10 +33,21 @@ Meet With
 - 18-50 yaş arası tüm kullanıcılar
 - Couchsurfing kullanıcıları
 
+• Sprint Review:
+
+Alınan kararlar: 1. sprint kapsamında tahmin edilen tamamlanacak puan 100 olarak belirlenmiştir. Ekip, 15 günde hedeflenen puana ulaşmıştır. Çıkan ürün denendi ve herhangi bir sorun ile karşılaşılmadı. Ekstra yapılması gerekenler belirlendi. 
+Sprint Review katılımcıları: Sinem Karaoğlu, Ahmet İskender, Doruk Kızıltunç, Kübra Özcan
+
+•Sprint Retrospective:
+  -Ekipten ayrılan bir kişi sonucunda, takım içindeki görev dağılımları yeniden belirlendi.
+  -Tahmin puanları gözden geçirildi.
+  -Sprint planlama toplantısında geri bildirimler ekip tarafından verildi.
+  -Sonraki sprintler için efor/saat artırılmalı.
+  -Toplantı/buluşmalarının iyileştirilmesi.
 
 ## Product Backlog URL
 
 Miro Backlog Board Debuggers [https://miro.com/app/board/uXjVO6Dz95M=/?share_link_id=967609512231]
-https://www.figma.com/file/QQS17x4wK8lSWwKYqX9YPh/Meet.-(Community)?node-id=0%3A1
+UI DESİGN: https://www.figma.com/file/QQS17x4wK8lSWwKYqX9YPh/Meet.-(Community)?node-id=0%3A1
 ---
 
