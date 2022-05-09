@@ -37,5 +37,6 @@ Meet With
 ## Product Backlog URL
 
 Miro Backlog Board Debuggers [https://miro.com/app/board/uXjVO6Dz95M=/?share_link_id=967609512231]
+https://www.figma.com/file/QQS17x4wK8lSWwKYqX9YPh/Meet.-(Community)?node-id=0%3A1
 ---
 
