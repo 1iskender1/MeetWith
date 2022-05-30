@@ -300,6 +300,7 @@ class _SignupPageState extends State<SignupPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Material(
+                      color: Color(0xFFFFFF0),
                       child: Checkbox(
                         value: agree,
                         onChanged: (value) {
