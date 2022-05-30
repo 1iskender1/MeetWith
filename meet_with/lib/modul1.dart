@@ -83,7 +83,7 @@ class TestPage extends StatelessWidget {
             Container(
               height: 20,
             ),
-            MaterialButton(color: Color(0xFFA8CD4C),
+            MaterialButton(color: Color(0xA8A8CD4C),
                 onPressed: (){
               Navigator.of(context).push(MaterialPageRoute(builder: (context){
                 return WelcomePage();
