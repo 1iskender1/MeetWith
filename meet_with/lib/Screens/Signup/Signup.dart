@@ -308,6 +308,8 @@ class _SignupPageState extends State<SignupPage> {
                             agree = value ?? false;
                           });
                         },
+                        activeColor: Color(0xA8A8CD4C),
+                        checkColor: Colors.white,
                       ),
                     ),
                     const Text(
