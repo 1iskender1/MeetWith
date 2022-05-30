@@ -41,7 +41,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
               width: 300,
               height: 60,
               decoration: const BoxDecoration(
-                color:Color.fromRGBO(168, 205, 76, 1) ,
+              color:Color(0xFFFFFFF0),
               ),
               child: const Padding(
                 padding: EdgeInsetsDirectional.all(5),
@@ -66,7 +66,8 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                 width: 180,
                 height: 200,
                 decoration: const BoxDecoration(
-                  color:Color.fromRGBO(168, 205, 76, 1) ,
+                  color: Color(0xA8A8CD4C),
+                  borderRadius:  BorderRadius.all(Radius.circular(30)),
                 ),
                 child: Row(
                   children: [
@@ -93,7 +94,9 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                 width: 185,
                 height: 200,
                 decoration: const BoxDecoration(
-                  color:Color.fromRGBO(168, 205, 76, 1) ,
+                  color: Color(0xA8A8CD4C),
+                  borderRadius:  BorderRadius.all(Radius.circular(30)),
+
                 ),
                 child: Row(
                   children: [
@@ -134,7 +137,8 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                   width: 180,
                   height: 200,
                   decoration: const BoxDecoration(
-                    color:Color.fromRGBO(168, 205, 76, 1) ,
+                    color: Color(0xA8A8CD4C),
+                    borderRadius:  BorderRadius.all(Radius.circular(30)),
                   ),
                   child: Row(
                     children: [
@@ -161,7 +165,8 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                   width: 185,
                   height: 200,
                   decoration: const BoxDecoration(
-                    color:Color.fromRGBO(168, 205, 76, 1) ,
+                    color: Color(0xA8A8CD4C),
+                    borderRadius:  BorderRadius.all(Radius.circular(30)),
                   ),
                   child: Row(
                     children: [
@@ -191,8 +196,9 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
           Padding(
             padding: const EdgeInsetsDirectional.all(5),
             child: MaterialButton(
-              color: Color(0xFFA8CD4C),
-
+              color: Color(0xA8A8CD4C),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10)),
               onPressed: (){
                 Navigator.of(context).push(MaterialPageRoute(builder: (context){
                   return anliketkinlik();
