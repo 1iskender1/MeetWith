@@ -42,6 +42,9 @@ class _SignupPageState extends State<SignupPage> {
   final _text = TextEditingController();
   bool _validate = false;
   
+  final _textsoyad = TextEditingController();
+  bool _validate1 = false;
+  
   final _textmail = TextEditingController();
   bool _validate2 = false;
 
@@ -54,6 +57,8 @@ class _SignupPageState extends State<SignupPage> {
   @override
   void dispose() {
     _text.dispose();
+    super.dispose();
+    _textsoyad.dispose();
     super.dispose();
      _textmail.dispose();
     super.dispose();
@@ -180,7 +185,7 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _text,
+                controller: _textsoyad,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
@@ -191,7 +196,7 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate ? 'Soyisim boş bırakılamaz' : null,
+                    errorText: _validate1 ? 'Soyisim boş bırakılamaz' : null,
                     labelText: "Soyadınız",
                     labelStyle: TextStyle(color: Colors.black),
                     hintText: "Lütfen soyadınızı yazın",
