@@ -41,10 +41,25 @@ class _SignupPageState extends State<SignupPage> {
 
   final _text = TextEditingController();
   bool _validate = false;
+  
+  final _textmail = TextEditingController();
+  bool _validate2 = false;
+
+  final _textsifre = TextEditingController();
+  bool _validate3 = false;
+
+  final _textsifretekrar = TextEditingController();
+  bool _validate4 = false;
 
   @override
   void dispose() {
     _text.dispose();
+    super.dispose();
+     _textmail.dispose();
+    super.dispose();
+    _textsifre.dispose();
+    super.dispose();
+    _textsifretekrar.dispose();
     super.dispose();
   }
 
@@ -189,7 +204,7 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _text,
+                controller: _textmail,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
@@ -200,7 +215,7 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate ? 'Mail adresi boş bırakılamaz' : null,
+                    errorText: _validate2 ? 'Mail adresi boş bırakılamaz' : null,
                     labelText: "Email adresi",
                     labelStyle: TextStyle(color: Colors.black),
                     hintText: "Lütfen mail adresinizi yazın",
@@ -213,7 +228,7 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _text,
+                controller: _textsifre,
                 obscureText: _isObscure,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
@@ -225,7 +240,7 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate ? 'Şifre boş bırakılamaz' : null,
+                    errorText: _validate3 ? 'Şifre boş bırakılamaz' : null,
                     labelText: "Şifre",
                     suffixIcon: IconButton(
                       icon: Icon(
@@ -245,7 +260,7 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _text,
+                controller: _textsifretekrar,
                 obscureText: _isObscure,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
@@ -257,7 +272,7 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate ? 'Lütfen şifrenizi tekrar girin' : null,
+                    errorText: _validate4 ? 'Lütfen şifrenizi tekrar girin' : null,
                     labelText: "Şifre onay",
                     suffixIcon: IconButton(
                       icon: Icon(
