@@ -209,6 +209,7 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
+                keyboardType: TextInputType.emailAddress,
                 controller: _textmail,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
