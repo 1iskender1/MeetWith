@@ -1,13 +1,22 @@
 // ignore_for_file: file_names, deprecated_member_use
 
 import 'dart:ui';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:auth_buttons/auth_buttons.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:meetwith/Screens/etkinliklersayfasi.dart';
+import 'package:meetwith/Screens/Signup/kayitol.dart';
 import 'package:meetwith/constants.dart';
 
-void main() => runApp(MyApp());
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
 
@@ -27,8 +36,10 @@ class MyApp extends StatelessWidget {
 }
 
 class SignupPage extends StatefulWidget {
+  static String tag = 'register-page';
+
   const SignupPage (
-      {required this.title, required TextStyle style}) : super(key: null);
+      {required this.title, required TextStyle style});
   final String title;
 
   @override
@@ -36,37 +47,39 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
-  bool agree= false;
+
+  final _formKey = GlobalKey<FormState>();
+  bool agree = false;
   bool _isObscure = true;
 
-  final _text = TextEditingController();
+  final emailTextEditController = new TextEditingController();
+  final firstNameTextEditController = new TextEditingController();
+  final lastNameTextEditController = new TextEditingController();
+  final passwordTextEditController = new TextEditingController();
+  final confirmPasswordTextEditController = new TextEditingController();
+
+  final FocusNode _emailFocus = FocusNode();
+  final FocusNode _firstNameFocus = FocusNode();
+  final FocusNode _lastNameFocus = FocusNode();
+  final FocusNode _passwordFocus = FocusNode();
+  final FocusNode _confirmPasswordFocus = FocusNode();
+
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+
+  String _errorMessage = '';
+
+  void processError(final PlatformException error) {
+    setState(() {
+      _errorMessage = error.message!;
+    });
+  }
+
   bool _validate = false;
-  
-  final _textsoyad = TextEditingController();
   bool _validate1 = false;
-  
-  final _textmail = TextEditingController();
   bool _validate2 = false;
-
-  final _textsifre = TextEditingController();
   bool _validate3 = false;
-
-  final _textsifretekrar = TextEditingController();
   bool _validate4 = false;
 
-  @override
-  void dispose() {
-    _text.dispose();
-    super.dispose();
-    _textsoyad.dispose();
-    super.dispose();
-     _textmail.dispose();
-    super.dispose();
-    _textsifre.dispose();
-    super.dispose();
-    _textsifretekrar.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,7 +126,9 @@ class _SignupPageState extends State<SignupPage> {
                 const SizedBox(width: 10),
                 Expanded(
                   child: GoogleAuthButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      await signInWithGoogle();
+                    },
                     text: "Google",
                     darkMode: false,
                     style: const AuthButtonStyle(
@@ -161,8 +176,14 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _text,
-                decoration: InputDecoration(
+                autofocus: false,
+                textInputAction: TextInputAction.next,
+                focusNode: _firstNameFocus,
+                onSubmitted: (term) {
+                  FocusScope.of(context).requestFocus(_lastNameFocus);
+                },
+                controller: firstNameTextEditController,
+                  decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
                       borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -185,7 +206,13 @@ class _SignupPageState extends State<SignupPage> {
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
-                controller: _textsoyad,
+                autofocus: false,
+                textInputAction: TextInputAction.next,
+                focusNode: _lastNameFocus,
+                onSubmitted: (term) {
+                  FocusScope.of(context).requestFocus(_emailFocus);
+                },
+                controller: lastNameTextEditController,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
@@ -210,7 +237,13 @@ class _SignupPageState extends State<SignupPage> {
                   left: 50, right: 50, top: 15, bottom: 10),
               child: TextField(
                 keyboardType: TextInputType.emailAddress,
-                controller: _textmail,
+                  autofocus: true,
+                  textInputAction: TextInputAction.next,
+                  focusNode: _emailFocus,
+                  onSubmitted: (term) {
+                    FocusScope.of(context).requestFocus(_passwordFocus);
+                  },
+                controller: emailTextEditController,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
@@ -221,7 +254,9 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate2 ? 'Mail adresi boş bırakılamaz' : null,
+                    errorText: _validate2
+                        ? 'Mail adresi boş bırakılamaz'
+                        : null,
                     labelText: "Email adresi",
                     labelStyle: TextStyle(color: Colors.black),
                     hintText: "Lütfen mail adresinizi yazın",
@@ -233,9 +268,12 @@ class _SignupPageState extends State<SignupPage> {
             Padding(
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
-              child: TextField(
-                controller: _textsifre,
-                obscureText: _isObscure,
+              child: TextFormField(
+                autofocus: false,
+                obscureText: true,
+                controller: passwordTextEditController,
+                textInputAction: TextInputAction.next,
+                focusNode: _passwordFocus,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Colors.black, width: 1.0),
@@ -254,7 +292,8 @@ class _SignupPageState extends State<SignupPage> {
                       onPressed: () {
                         setState(() {
                           _isObscure = !_isObscure;
-                        }); }, ),
+                        });
+                      },),
                     labelStyle: TextStyle(color: Colors.black),
                     hintText: "Lütfen bir şifre oluşturun",
                     filled: true,
@@ -265,8 +304,11 @@ class _SignupPageState extends State<SignupPage> {
             Padding(
               padding: EdgeInsets.only(
                   left: 50, right: 50, top: 15, bottom: 10),
-              child: TextField(
-                controller: _textsifretekrar,
+              child: TextFormField(
+              key: _formKey,
+                controller: confirmPasswordTextEditController,
+                focusNode: _confirmPasswordFocus,
+                textInputAction: TextInputAction.done,
                 obscureText: _isObscure,
                 decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
@@ -278,7 +320,9 @@ class _SignupPageState extends State<SignupPage> {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 10),
-                    errorText: _validate4 ? 'Lütfen şifrenizi tekrar girin' : null,
+                    errorText: _validate4
+                        ? 'Lütfen şifrenizi tekrar girin'
+                        : null,
                     labelText: "Şifre onay",
                     suffixIcon: IconButton(
                       icon: Icon(
@@ -286,7 +330,8 @@ class _SignupPageState extends State<SignupPage> {
                       onPressed: () {
                         setState(() {
                           _isObscure = !_isObscure;
-                        }); }, ),
+                        });
+                      },),
                     labelStyle: TextStyle(color: Colors.black),
                     hintText: "Lütfen şifrenizi tekrar girin",
                     filled: true,
@@ -326,24 +371,28 @@ class _SignupPageState extends State<SignupPage> {
                 color: kPrimaryColor,
                 highlightColor: Colors.grey,
                 elevation: 10,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
                 child: const Text(
                   "Kaydol",
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () {
-                  setState(() {
-                    _text.text.isEmpty ? _validate = true : _validate = false;
-                  });
-                  print("Kayıt olundu.");
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return etkinliklersayfasi();
-                  }
-                  )
-                  );
-                },
+                onPressed: () async {
+                    await _firebaseAuth
+                        .createUserWithEmailAndPassword(
+                    email: emailTextEditController.text,
+                    password: passwordTextEditController.text);
+                          await FirebaseFirestore.instance
+                        .collection('kullanicilar')
+                        .add({
+                    'Adı': firstNameTextEditController.text,
+                    'Soyadı': lastNameTextEditController.text,
+                            'Email': emailTextEditController.text,
+                            'Şifre': passwordTextEditController.text,
+                            'Şifretekrar': confirmPasswordTextEditController.text,
+                    });
+                    }),
               ),
-            ),
           ],
         ),
       ),
