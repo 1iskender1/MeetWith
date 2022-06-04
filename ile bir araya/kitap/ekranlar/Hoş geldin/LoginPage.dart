@@ -68,7 +68,7 @@ class LoginPage extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 120.0,),
                           onPressed: (){
                             Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                              return LoginScreen();
+                              return LoginScreen(title: '', style: TextStyle(fontFamily: 'Playfair Display' ),);
                             }));
                           },
                           color: Colors.white,
