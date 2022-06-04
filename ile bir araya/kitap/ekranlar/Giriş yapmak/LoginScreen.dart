@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:auth_buttons/auth_buttons.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import '../../constants.dart';
 import '../Signup/kayitol.dart';
 
@@ -74,6 +73,21 @@ class _LoginScreenState extends State<LoginScreen> {
         color: const Color.fromRGBO(255, 255, 240, 1),
         child: ListView(
           children: <Widget>[
+              Text(
+              "HOŞ \nGELDİNİZ",
+                textAlign: TextAlign.left,
+              style: TextStyle(fontFamily: 'Playfair Display',
+              fontWeight: FontWeight.bold,
+              fontSize: 30,
+              ),
+              ),
+            Text(
+              "Yeni arkadaşların seni özledi",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontFamily: 'Playfair Display',
+                fontSize: 15,
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
@@ -154,6 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Text( "YA DA",
                         textAlign: TextAlign.right,
                           style: TextStyle(
+                            fontFamily: 'Playfair Display',
                             fontSize: 14,
                             color: Colors.grey,
                       ),
@@ -169,7 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      left: 50, right: 50, top: 15, bottom: 10),
+                      left: 50, right: 50, top: 10, bottom: 5),
                   child: TextField(
                     keyboardType: TextInputType.emailAddress,
                     autofocus: true,
@@ -193,7 +208,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             ? 'Mail adresi boş bırakılamaz'
                             : null,
                         labelText: "Email adresi",
-                        labelStyle: TextStyle(color: Colors.black),
+                        labelStyle: TextStyle(
+                           fontFamily: 'Playfair Display',
+                                color: Colors.black),
                         hintText: "Lütfen mail adresinizi yazın",
                         filled: true,
                         fillColor: Colors.white
@@ -202,7 +219,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 Padding(
                   padding: EdgeInsets.only(
-                      left: 50, right: 50, top: 15, bottom: 10),
+                      left: 50, right: 50, top: 10, bottom: 5),
                   child: TextFormField(
                     autofocus: false,
                     obscureText: true,
@@ -221,7 +238,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         contentPadding: EdgeInsets.symmetric(vertical: 10),
                         errorText: _validate3 ? 'Şifre boş bırakılamaz' : null,
                         labelText: "Şifre",
-                        labelStyle: TextStyle(color: Colors.black),
+                        labelStyle: TextStyle(
+                            fontFamily: 'Playfair Display',
+                            color: Colors.black),
                         hintText: "Lütfen bir şifre oluşturun",
                         filled: true,
                         fillColor: Colors.white
@@ -231,7 +250,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     Padding(
                       padding: EdgeInsets.only(),
                           child: CheckboxListTile(
-                            title: Text ('Beni hatırla',),
+                            title: Text ('Beni hatırla',
+                            style: TextStyle(fontFamily: 'Playfair Display'),),
                             value: agree,
                             onChanged: (newvalue) {
                               setState(() {
@@ -249,6 +269,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     'Parolamı unuttum',
                     textAlign: TextAlign.left,
                     style: TextStyle(
+                      fontFamily: 'Playfair Display',
                       color: Colors.purple,
                       fontWeight: FontWeight.bold,
                     ),
@@ -259,6 +280,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Text(
                     'Hesap oluştur',
                     style: TextStyle(
+                      fontFamily: 'Playfair Display',
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
                       height: 0.1,
@@ -274,7 +296,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Text('OTURUM AÇ')
+                    child: Text('OTURUM AÇ',
+                    style: TextStyle( fontFamily: 'Playfair Display',
+                      fontWeight: FontWeight.bold,
+                    ),),
                 ),
               ],
             ),
@@ -284,6 +309,4 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
-
 
