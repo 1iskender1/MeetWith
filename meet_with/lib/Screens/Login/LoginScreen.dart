@@ -310,9 +310,9 @@ class _LoginScreenState extends State<LoginScreen> {
                           password: passwordTextEditController.text,
                       );
                     } on FirebaseAuthException catch (e) {
-                      if (e.code == 'user-not-found') {
+                      if (e.code == 'Kullanıcı bulunamadı') {
                         print('No user found for that email.');
-                      } else if (e.code == 'wrong-password') {
+                      } else if (e.code == 'Şifreniz hatalı') {
                         print('Wrong password provided for that user.');
                       }
                     }
