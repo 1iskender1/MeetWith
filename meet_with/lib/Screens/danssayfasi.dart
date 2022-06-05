@@ -13,8 +13,6 @@ class _danssayfasiState extends State<danssayfasi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFF0),
-      appBar: AppBar(
-        backgroundColor: const Color(0xFFFFFFF0),
         automaticallyImplyLeading: false,
         leading: IconButton(
           iconSize: 50,
