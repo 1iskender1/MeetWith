@@ -88,7 +88,7 @@ class _danssayfasiState extends State<danssayfasi> {
                               'Dans',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                fontFamily: 'Roboto',
+                                fontFamily: 'OpenSans',
                                 fontSize: 40,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -140,7 +140,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                 'Dans Gecesi',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                  fontFamily: 'Roboto',
+                                  fontFamily: 'OpenSans',
                                   fontSize: 25,
                                 ),
                               ),
@@ -151,7 +151,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                 'Dans gecesinde Salsa bilen bir dans partneri arıyorum.',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                  fontFamily: 'Roboto',
+                                  fontFamily: 'OpenSans',
                                   color: Colors.black,
                                   fontSize: 16,
                                 ),
@@ -163,7 +163,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                 'Etkinliği oluşturan: SalihTekin1',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                  fontFamily: 'Roboto',
+                                  fontFamily: 'OpenSans',
                                   color: Colors.red,
                                   fontSize: 12,
                                 ),
@@ -217,7 +217,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                   'Dans Kulübü',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
-                                    fontFamily: 'Roboto',
+                                    fontFamily: 'OpenSans',
                                     fontSize: 25,
                                   ),
                                 ),
@@ -228,7 +228,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                   'Dans Kulübüne gidebileceğim birini arıyorum.',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
-                                    fontFamily: 'Roboto',
+                                    fontFamily: 'OpenSans',
                                     color: Colors.black,
                                     fontSize: 16,
                                   ),
@@ -240,7 +240,7 @@ class _danssayfasiState extends State<danssayfasi> {
                                   'Etkinliği oluşturan: AyşeKoç',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
-                                    fontFamily: 'Roboto',
+                                    fontFamily: 'OpenSans',
                                     color: Colors.red,
                                     fontSize: 12,
                                   ),
