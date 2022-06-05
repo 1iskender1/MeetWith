@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:meetwith/Screens/etkinliklersayfasi.dart';
+import 'package:yeni/Screens/etkinliklersayfasi.dart';
 
 class danssayfasi extends StatefulWidget {
   const danssayfasi({Key? key}) : super(key: key);
-
 
   @override
   State<danssayfasi> createState() => _danssayfasiState();
@@ -13,249 +12,400 @@ class _danssayfasiState extends State<danssayfasi> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFF0),
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          iconSize: 50,
-          color: Colors.red,
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-            size: 50,
-          ),
-          onPressed: () {
-            Navigator.of(context).pop(MaterialPageRoute(builder: (context){
-              return etkinliklersayfasi();
-            }));
-          },
-        ),
-        title: Image.asset('imagess/Ev.png',
-          width: 300,
-          height: 100,
-          fit: BoxFit.fill,
-        ),
-        actions: const [],
-        centerTitle: true,
-        elevation: 0,
-      ),
-      body:
-      // Generated code for this Column Widget...
-      Column(
-        mainAxisSize: MainAxisSize.max,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsetsDirectional.all(5),
-            child: // Generated code for this Column Widget...
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+      body: SingleChildScrollView(
+        child: Container(
+          color: const Color(0xFFFFFFF0),
+          child: Column(
+              children: <Widget>[
+                const SizedBox(height: 20,),
                 Row(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(30, 40, 5, 20),
-                      child: Container(
-                        width: 170,
-                        height: 170,
-                        decoration: const BoxDecoration(
-                          color: Colors.transparent,
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                          child: Image.asset(
-                            'imagess/dans.png',
-                            width: 170,
-                            height: 170,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Container(
-                        width: 150,
-                        height: 150,
-                        decoration: const BoxDecoration(
-                          color: Colors.transparent,
-                        ),
-                        child: const Align(
-                          alignment: AlignmentDirectional(0, 0),
-                          child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                            child: Text(
-                              'Dans',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontFamily: 'OpenSans',
-                                fontSize: 40,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    SizedBox(width:300, height: 100,
+                      child:Image.asset('assets/images/Ev.png'),
                     ),
                   ],
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 0, 20),
-                      child: Container(
-                        width: 100,
-                        height: 150,
-                        decoration: const BoxDecoration(
-                          color: Color(0xA8A8CD4C),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                          child: Image.asset(
-                            'imagess/dansgecesi.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 20),
-                      child: Container(
-                        width: 250,
-                        height: 150,
-                        decoration: const BoxDecoration(
-                          color: Color(0xA8A8CD4C),
-                        ),
-                        child: // Generated code for this Column Widget...
-                        Column(
-                          mainAxisSize: MainAxisSize.max,
-                          children: const <Widget>[
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                              child: Text(
-                                'Dans Gecesi',
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  fontSize: 25,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(10, 10, 5, 10),
-                              child: Text(
-                                'Dans gecesinde Salsa bilen bir dans partneri arıyorum.',
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  color: Colors.black,
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                            Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                              child: Text(
-                                'Etkinliği oluşturan: SalihTekin1',
-                                textAlign: TextAlign.start,
-                                style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  color: Colors.red,
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ),
-                          ],
-                        )
-
-                      ),
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(10, 10, 0, 20),
-                      child: Container(
-                        width: 100,
-                        height: 150,
-                        decoration: const BoxDecoration(
-                          color: Color(0xA8A8CD4C),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
-                          child: Image.asset(
-                            'imagess/dansfestival.png',
-                            width: 100,
-                            height: 100,
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsetsDirectional.fromSTEB(0, 10, 10, 20),
-                      child: Container(
-                          width: 250,
-                          height: 150,
-                          decoration: const BoxDecoration(
+                Column(
+                  children: <Widget>[
+                    Row(
+                      children: <Widget>[
+                        IconButton(
+                          iconSize: 50,
+                          onPressed: (){
+                          Navigator.of(context).pop(MaterialPageRoute(
+                            builder: (context){return const etkinliklersayfasi();
+                              },),);},
+                          icon: Icon(
+                            size: 50,
+                            Icons.arrow_back_outlined,
                             color: Color(0xA8A8CD4C),
                           ),
-                          child: // Generated code for this Column Widget...
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: const <Widget>[
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                                child: Text(
-                                  'Dans Kulübü',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontFamily: 'OpenSans',
-                                    fontSize: 25,
+                        ),
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(10.0),
+                            child: Container(
+                              height: 140,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Colors.transparent,
+                              ),
+                              child: Row(
+                                children: const [Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                  child: CircleAvatar(
+                                    foregroundImage: AssetImage('assets/images/dans.png'),
+                                    radius: 60,
+                                    backgroundColor: Color.fromRGBO(255, 255, 240, 1),),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                  child: Text('Dans', style: TextStyle(
+                                      shadows: [Shadow(
+                                        blurRadius: 15.0,
+                                        color: Colors.black,
+                                        offset: Offset(5.0, 5.0),),],
+                                      color: Colors.white, fontSize: 40),),
+                                ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Colors.transparent,
+                              ),
+                              child: Row(children: [
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color:const Color(0xA8A8CD4C),
+                                    ),
+                                    child: Image.asset('assets/images/dansgecesi.png',
+                                      width: 80,
+                                      height: 120,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
+                                Column(
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 10, 1, 5),
+                                          child: Text(
+                                            'Dans Gecesi',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 11.0,
+                                                color: Colors.grey,
+                                                offset: Offset(5.0, 5.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 25,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 1),
+                                          child: Text('Ankarada 01/07/22’deki dans'
+                                              '\n gecesinde Salsa ve Bachata bilen'
+                                              '\n bir dans partneri arıyorum.',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                          shadows: [Shadow(
+                                            blurRadius: 7.0,
+                                            color: Colors.grey,
+                                            offset: Offset(3.0, 3.0),),],
+                                          fontFamily: 'OpenSans',
+                                          fontSize: 15,
+                                          color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 5),
+                                          child: Text(
+                                            'Etkinliği oluşturan kişi SalihTekin',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 13.0,
+                                                color: Colors.grey,
+                                                offset: Offset(3.0, 3.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 13,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(10, 10, 5, 10),
-                                child: Text(
-                                  'Dans Kulübüne gidebileceğim birini arıyorum.',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontFamily: 'OpenSans',
-                                    color: Colors.black,
-                                    fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Colors.transparent,
+                              ),
+                              child: Row(children: [
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color:const Color(0xA8A8CD4C),
+                                    ),
+                                    child: Image.asset('assets/images/dansgecesi.png',
+                                      width: 80,
+                                      height: 120,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
+                                Column(
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 10, 1, 5),
+                                          child: Text(
+                                            'Dans Festivali',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 11.0,
+                                                color: Colors.grey,
+                                                offset: Offset(5.0, 5.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 25,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 1),
+                                          child: Text(
+                                            'İzmirde 02/08/22’deki dans'
+                                                '\n festivalinde Salsa ve Bachata bilen'
+                                                '\n bir dans partneri arıyorum.',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                shadows: [Shadow(
+                                                  blurRadius: 7.0,
+                                                  color: Colors.grey,
+                                                  offset: Offset(3.0, 3.0),),],
+                                                fontFamily: 'OpenSans',
+                                                fontSize: 15,
+                                                color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 5),
+                                          child: Text(
+                                            'Etkinliği oluşturan kişi AyseCelik',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 13.0,
+                                                color: Colors.grey,
+                                                offset: Offset(3.0, 3.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 13,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
                               ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(5, 10, 5, 10),
-                                child: Text(
-                                  'Etkinliği oluşturan: AyşeKoç',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                    fontFamily: 'OpenSans',
-                                    color: Colors.red,
-                                    fontSize: 12,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Container(
+                              height: 150,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(30),
+                                color: Colors.transparent,
+                              ),
+                              child: Row(children: [
+                                Padding(
+                                  padding: const EdgeInsets.fromLTRB(20, 10, 10, 10),
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(30),
+                                      color:const Color(0xA8A8CD4C),
+                                    ),
+                                    child: Image.asset('assets/images/dansgecesi.png',
+                                      width: 80,
+                                      height: 120,
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
+                                Column(
+                                  children: [
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 10, 1, 5),
+                                          child: Text(
+                                            'Dans Partisi',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 11.0,
+                                                color: Colors.grey,
+                                                offset: Offset(5.0, 5.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 25,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 1),
+                                          child: Text(
+                                            'İstanbulda 03/09/22’deki dans'
+                                                '\n partisinde Salsa ve Bachata bilen'
+                                                '\n bir dans partneri arıyorum.',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                                shadows: [Shadow(
+                                                  blurRadius: 7.0,
+                                                  color: Colors.grey,
+                                                  offset: Offset(3.0, 3.0),),],
+                                                fontFamily: 'OpenSans',
+                                                fontSize: 15,
+                                                color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: const [
+                                        Padding(
+                                          padding: EdgeInsets.fromLTRB(1, 5, 1, 5),
+                                          child: Text(
+                                            'Etkinliği oluşturan kişi MuratDemir',
+                                            textAlign: TextAlign.center,
+                                            style: TextStyle(
+                                              shadows: [Shadow(
+                                                blurRadius: 13.0,
+                                                color: Colors.grey,
+                                                offset: Offset(3.0, 3.0),),],
+                                              fontFamily: 'OpenSans',
+                                              fontSize: 13,
+                                              color: Colors.black,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ],
                               ),
-                            ],
-                          )
-                      ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
-            )
+          ),
+        ),
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFFFFFFF0),
+        elevation: 0,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
+        iconSize: 30,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Ana Sayfa',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Keşfet',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: 'Ayarlar',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            label: 'Mesajlar',
           ),
         ],
+        selectedItemColor: const Color(0xA8A8CD4C),
+        selectedFontSize: 15,
+        unselectedItemColor: const Color(0xA8A8CD4C),
+        unselectedFontSize: 15,
       ),
     );
   }
