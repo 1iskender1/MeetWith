@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yeni/Screens/etkinliklersayfasi.dart';
+import 'package:meetwith/Screens/etkinliklersayfasi.dart';
 
 class danssayfasi extends StatefulWidget {
   const danssayfasi({Key? key}) : super(key: key);
