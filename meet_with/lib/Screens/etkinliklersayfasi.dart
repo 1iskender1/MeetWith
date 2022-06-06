@@ -50,7 +50,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       fontSize: 22,
-                      fontFamily: 'Roboto',
+                      fontFamily: 'OpenSans',
                       color: Colors.black,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                      const Text('Müzik', textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 17,
-                        fontFamily: 'Roboto',
+                        fontFamily: 'OpenSans',
                         color: Colors.white,
                       ),
                     ),
@@ -118,7 +118,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                      Text('Dans', textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 17,
-                        fontFamily: 'Roboto',
+                        fontFamily: 'OpenSans',
                         color: Colors.white,
                       ),
                     ),
@@ -154,7 +154,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                       Text('Sinema', textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 17,
-                          fontFamily: 'Roboto',
+                          fontFamily: 'OpenSans',
                           color: Colors.white,
                         ),
                       ),
@@ -182,7 +182,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                       Text('Konser', textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 17,
-                          fontFamily: 'Roboto',
+                          fontFamily: 'OpenSans',
                           color: Colors.white,
                         ),
                       ),
@@ -211,7 +211,7 @@ class _etkinliklersayfasiState extends State<etkinliklersayfasi> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 22,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'OpenSans',
                   color: Colors.white,
                 ),
               ),
