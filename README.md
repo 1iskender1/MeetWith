@@ -39,4 +39,4 @@ Miro Backlog Board Debuggers [https://miro.com/app/board/uXjVO6Dz95M=/?share_lin
 
 UI DESİGN: https://www.figma.com/file/QQS17x4wK8lSWwKYqX9YPh/Meet.-(Community)?node-id=0%3A1
 ---
-
+DRIVE LINKI: https://drive.google.com/drive/folders/1oEy7pLxPL1cYH0c2A2xfW4TbIbNEGDBd?usp=sharing
