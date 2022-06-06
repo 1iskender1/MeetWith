@@ -40,3 +40,16 @@ Miro Backlog Board Debuggers [https://miro.com/app/board/uXjVO6Dz95M=/?share_lin
 UI DESİGN: https://www.figma.com/file/QQS17x4wK8lSWwKYqX9YPh/Meet.-(Community)?node-id=0%3A1
 ---
 DRIVE LINKI: https://drive.google.com/drive/folders/1oEy7pLxPL1cYH0c2A2xfW4TbIbNEGDBd?usp=sharing
+
+##  Örnek Kullanıcılar
+1. Kübra Özcan
+eposta: kubraozcan1907@gmail.com
+şifre: kübraözcan
+
+2. Doruk
+eposta: dorukkiziltunc@gmail.com
+şifre: 12345678
+
+3. Doruk2
+eposta: doruk.kiziltunc@outlook.com
+şifre: 123456789
